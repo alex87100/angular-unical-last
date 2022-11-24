@@ -1,0 +1,23 @@
+<mat-card class="card" *ngIf="student">
+  <mat-card-title>{{title}} con ID:{{student.id}}</mat-card-title>
+  <mat-card-content>
+    <mat-label class="name" for="student-fiscalCode">Student fiscal code:</mat-label>
+    <input matInput id="student-fiscalCode" [(ngModel)]="student.fiscalCode" placeholder="Student Fiscal Code"/>
+  </mat-card-content>
+  <mat-card-content>
+    <mat-label class="name" for="student-name">Student name:</mat-label>
+    <input matInput id="student-name" [(ngModel)]="student.name" placeholder="Student name"/>
+  </mat-card-content>
+  <mat-card-content>
+    <mat-label class="surname" for="student-surname">Student surname:</mat-label>
+    <input matInput id="student-surname" [(ngModel)]="student.surname" placeholder="Student surname"/>
+  </mat-card-content>
+  <mat-card-content>
+    <mat-label class="date" for="student-date">Student date: </mat-label>
+    <input matInput id="student-date" [(ngModel)]="student.date" placeholder="Student date"/>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="save()">Save</button>
+    <button mat-raised-button color="secondary" (click)="goBack()">go back</button>
+  </mat-card-actions>
+</mat-card>

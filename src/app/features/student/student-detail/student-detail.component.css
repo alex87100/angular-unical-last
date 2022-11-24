@@ -1,0 +1,39 @@
+.card {
+  text-align: left;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 3em .5em 30px;
+  background-color: #4899ea;
+}
+
+.cardDetail {
+    background-color: #76b3ef;
+    margin-top: 1rem;
+}
+
+
+h2 {
+    text-align: left;
+    padding: 1rem;
+}
+
+input {
+    font-size: 1em;
+    padding: .5rem;
+    box-sizing: border-box;
+    margin-left: 2rem;
+}
+
+label {
+    color: #435960;
+    font-weight: bold;
+}
+
+.back-button {
+    margin-left: 2rem;
+}
+
+.save-button {
+    margin-left: 2rem;
+}
+

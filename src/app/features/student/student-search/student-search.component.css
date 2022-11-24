@@ -1,0 +1,28 @@
+.cardSearch {
+    background-color: #76b3ef;
+    margin-top: 1rem;
+}
+
+
+.cardFound {
+    background-color: #76b3ef;
+    margin-top: 1rem;
+}
+.cardListIn {
+    background-color: #1976d2;
+
+}
+input {
+    box-sizing: border-box;
+    margin-left: 2rem;
+}
+
+a {
+    color: #e8e8e8;
+}
+
+a:hover {
+    color: black;
+}
+
+

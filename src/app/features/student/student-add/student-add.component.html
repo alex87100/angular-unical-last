@@ -1,0 +1,37 @@
+<h1 mat-dialog-title col>{{title}}</h1>
+<div mat-dialog-title>Nuovo studente</div>
+<div mat-dialog-content>
+  <mat-form-field  appearance="outline">
+    <mat-label>Student fiscalCode:</mat-label>
+    <input matInput #sFiscal placeholder="Student fiscal code" [formControl]="controlFiscal" required>
+    <mat-error *ngIf="controlFiscal.invalid">{{getErrorMessageFiscal()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Student name:</mat-label>
+    <input matInput #sName placeholder="Student name" [formControl]="controlName" required>
+    <mat-error *ngIf="controlName.invalid">{{getErrorMessageName()}}</mat-error>
+
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Student surname:</mat-label>
+    <input matInput #sSurname placeholder="Student surname" [formControl]="controlSurname" required>
+    <mat-error *ngIf="controlSurname.invalid">{{getErrorMessageSurname()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Student birth date:</mat-label>
+
+    <input matInput #sDate type="date" placeholder="Student date" [formControl]="controlDate" required >
+    <mat-error *ngIf="controlDate.invalid">{{getErrorMessageDate()}}</mat-error>
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>No</button>
+  <button mat-button mat-dialog-close cdkFocusInitial type="submit" (click)="add(sFiscal.value.toUpperCase(),sName.value,sSurname.value,sDate.value); sFiscal.value=''; sName.value=''; sSurname.value=''; sDate.value=''; " mat-dialog-close mat-button>Submit</button>
+</div>
+
+<!--pre>
+
+  {{this.myForm.value|json}}
+  <{{this.formRequest.getFC('startTime')|json}}
+</pre-->

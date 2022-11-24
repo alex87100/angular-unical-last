@@ -1,0 +1,18 @@
+<mat-card class="cardSearch">
+  <mat-card-title>{{getTitle()}}</mat-card-title>
+  <mat-card-content>
+    <label for="search-box">Cerca nome</label> <input #searchBox id="search-box" (input)="search(searchBox.value)"/>
+  </mat-card-content>
+</mat-card>
+<mat-divider></mat-divider>
+
+<mat-card class="cardFound">
+  <mat-card-title *ngIf="(students$ | async)?.length">Studenti Trovati</mat-card-title>
+  <mat-card-content *ngFor="let student of students$| async">
+    <mat-card class="cardListIn">
+      <a routerLink="/studentDetail/{{student.id}}">{{student.name}}-{{student.surname}}</a>
+    </mat-card>
+  </mat-card-content>
+
+</mat-card>
+
