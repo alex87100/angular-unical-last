@@ -1,0 +1,28 @@
+<mat-card class="card">
+  <mat-card-title>{{ title }}</mat-card-title>
+  <mat-card-content>
+    <h2 class="text-center my-4">List of School Subjects</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Subject</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let subject of subjects; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ subject }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+

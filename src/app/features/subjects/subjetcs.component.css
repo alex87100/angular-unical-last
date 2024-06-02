@@ -1,0 +1,16 @@
+.card {
+  text-align: left;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 3em 0.5em 30px;
+  background-color: #4899ea;
+}
+
+.table {
+  background-color: #ffffff;
+}
+
+.table th,
+.table td {
+  text-align: center;
+}

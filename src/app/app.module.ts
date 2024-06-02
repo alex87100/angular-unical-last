@@ -5,16 +5,21 @@ import {AppRoutingModule} from './app-routing.module';
 import {DashboardComponent} from './features/dashboard/dashboard.component';
 import {HeaderComponent} from './layout/header/header.component';
 import {StudentModule} from "./features/student/student.module";
-
+import { SubjectsComponent } from './features/subjects/subjects.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   imports: [
     AppRoutingModule,
     StudentModule,
+    BrowserModule,
+    BrowserAnimationsModule,
     MatCardModule
   ],
   declarations: [
     AppComponent,
     HeaderComponent,
+    SubjectsComponent,
     DashboardComponent
   ],
   exports: [
